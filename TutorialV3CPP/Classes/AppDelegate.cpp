@@ -51,33 +51,60 @@ bool AppDelegate::applicationDidFinishLaunching() {
     if ( 2048 == screenSize.width || 2048 == screenSize.height ) {
         resDirOrders.push_back("ipadhd");
         resDirOrders.push_back("ipad");
-        resDirOrders.push_back("iphonehd5");
-        resDirOrders.push_back("iphonehd");
+        resDirOrders.push_back("iphone6p");
+        resDirOrders.push_back("iphone6");
+        resDirOrders.push_back("iphone5");
+        resDirOrders.push_back("iphone4");
         resDirOrders.push_back("iphone");
         
         glview->setDesignResolutionSize(2048, 1536, ResolutionPolicy::NO_BORDER);
         
     } else if ( 1024 == screenSize.width || 1024 == screenSize.height ) {
         resDirOrders.push_back("ipad");
-        resDirOrders.push_back("iphonehd5");
-        resDirOrders.push_back("iphonehd");
+        resDirOrders.push_back("iphone6p");
+        resDirOrders.push_back("iphone6");
+        resDirOrders.push_back("iphone5");
+        resDirOrders.push_back("iphone4");
         resDirOrders.push_back("iphone");
         
         glview->setDesignResolutionSize(1024, 768, ResolutionPolicy::NO_BORDER);
         
+    } else if ( 2208 == screenSize.width || 2208 == screenSize.height ) {
+        // iPhone 6 Plus
+        resDirOrders.push_back("iphone6p");
+        resDirOrders.push_back("iphone6");
+        resDirOrders.push_back("iphone5");
+        resDirOrders.push_back("iphone4");
+        resDirOrders.push_back("iphone");
+        
+        glview->setDesignResolutionSize(2208, 1242, ResolutionPolicy::NO_BORDER);
+        
+    } else if ( 1334 == screenSize.width || 1334 == screenSize.height ) {
+        // iPhone 6
+        resDirOrders.push_back("iphone6");
+        resDirOrders.push_back("iphone5");
+        resDirOrders.push_back("iphone4");
+        resDirOrders.push_back("iphone");
+        
+        glview->setDesignResolutionSize(1334, 750, ResolutionPolicy::NO_BORDER);
+
     } else if ( 1136 == screenSize.width || 1136 == screenSize.height ) {
-        resDirOrders.push_back("iphonehd5");
-        resDirOrders.push_back("iphonehd");
+        // iPhone 5
+        resDirOrders.push_back("iphone5");
+        resDirOrders.push_back("iphone4");
         resDirOrders.push_back("iphone");
         
         glview->setDesignResolutionSize(1136, 640, ResolutionPolicy::NO_BORDER);
-        
+
     } else if ( 960 == screenSize.width || 960 == screenSize.height ) {
-        resDirOrders.push_back("iphonehd");
+        // iPhone 4
+        resDirOrders.push_back("iphone4");
         resDirOrders.push_back("iphone");
         
         glview->setDesignResolutionSize(960, 640, ResolutionPolicy::NO_BORDER);
+
     } else {
+        // iPhone
         resDirOrders.push_back("iphone");
         
         glview->setDesignResolutionSize(480, 320, ResolutionPolicy::NO_BORDER);
