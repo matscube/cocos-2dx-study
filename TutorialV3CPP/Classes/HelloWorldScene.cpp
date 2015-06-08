@@ -34,8 +34,11 @@ bool HelloWorld::init()
     mySprite->setPosition(Point((visibleSize.width / 2) + origin.x, (visibleSize.height / 2) + origin.y));
     this->addChild(mySprite);
 
-    auto action = MoveBy::create(1, Point(50, 150));
-    mySprite->runAction(action);
+//    auto action = MoveBy::create(1, Point(50, 150));
+//    mySprite->runAction(action);
+    
+    auto action2 = MoveTo::create(1, Point(50, 150));
+    mySprite->runAction(action2);
     
     return true;
 }
