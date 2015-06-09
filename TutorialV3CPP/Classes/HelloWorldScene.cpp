@@ -37,8 +37,11 @@ bool HelloWorld::init()
 //    auto action = MoveBy::create(1, Point(50, 150));
 //    mySprite->runAction(action);
     
-    auto action2 = MoveTo::create(1, Point(50, 150));
-    mySprite->runAction(action2);
+//    auto action2 = MoveTo::create(1, Point(50, 150));
+//    mySprite->runAction(action2);
+    
+    auto action3 = JumpBy::create(1, Point(100, 0),150, 1);
+    mySprite->runAction(action3);
     
     return true;
 }
