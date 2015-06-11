@@ -43,8 +43,16 @@ bool HelloWorld::init()
 //    auto action3 = JumpBy::create(1, Point(100, 0),150, 1);
 //    mySprite->runAction(action3);
     
-    auto action4 = JumpTo::create(1, Point(100, 100), 150, 1);
-    mySprite->runAction(action4);
+//    auto action4 = JumpTo::create(1, Point(100, 100), 150, 1);
+//    mySprite->runAction(action4);
+    
+    ccBezierConfig bezier;
+    bezier.controlPoint_1 = Point(0, visibleSize.height / 2);
+    bezier.controlPoint_2 = Point(300, -visibleSize.height / 2);
+    bezier.endPosition = Point(200, 100);
+    
+    auto action5 = BezierBy::create(3, bezier);
+    mySprite->runAction(action5);
     
     return true;
 }
